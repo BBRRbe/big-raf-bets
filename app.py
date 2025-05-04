@@ -61,15 +61,15 @@ picks = [
 # ------------------------
 def emoji_score(score):
   if score >= 300:
-return "🔥🚨 Elite Lock"
-elif score >= 200:
-return "✅ Very Reliable"
-elif score >= 100:
-return "👍 Stable Signal"
-elif score >= 70:
-return "⚠️ Borderline"
-else:
-return "❌ No Play"
+  return "🔥🚨 Elite Lock"
+  elif score >= 200:
+  return "✅ Very Reliable"
+  elif score >= 100:
+  return "👍 Stable Signal"
+  elif score >= 70:
+  return "⚠️ Borderline"
+  else:
+  return "❌ No Play"
 
 # Apply labels
 for pick in picks:
