@@ -12,7 +12,7 @@ if "authenticated" not in st.session_state:
   st.session_state.authenticated = False
 
 if not st.session_state.authenticated:
-st.title("Big Raf Bets™")
+  st.title("Big Raf Bets™")
 password_input = st.text_input("Enter Password to Access:", type="password")
 if password_input == PASSWORD:
 st.session_state.authenticated = True
