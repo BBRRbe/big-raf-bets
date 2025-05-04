@@ -50,10 +50,10 @@ selected_date = today if date_choice == "Today" else tomorrow
 # SAMPLE PICKS TABLE (DYNAMICALLY REPLACE WITH MODEL DATA)
 # ------------------------
 picks = [
-    {"League": "NBA", "Game": "Nuggets vs Timberwolves", "Pick": "Jokic o9.5 AST", "Confidence": 94, "Odds": "-105"},
-    {"League": "NHL", "Game": "Stars vs Avalanche", "Pick": "Over 5.5 goals", "Confidence": 91, "Odds": "+100"},
-    {"League": "NHL", "Game": "Stars vs Avalanche", "Pick": "Stars ML", "Confidence": 88, "Odds": "+116"},
-    {"League": "NBA", "Game": "Nuggets vs Timberwolves", "Pick": "Murray u6.5 AST", "Confidence": 85, "Odds": "-150"}
+{"League": "NBA", "Game": "Nuggets vs Timberwolves", "Pick": "Jokic o9.5 AST", "Confidence": 94, "Odds": "-105"},
+{"League": "NHL", "Game": "Stars vs Avalanche", "Pick": "Over 5.5 goals", "Confidence": 91, "Odds": "+100"},
+{"League": "NHL", "Game": "Stars vs Avalanche", "Pick": "Stars ML", "Confidence": 88, "Odds": "+116"},
+{"League": "NBA", "Game": "Nuggets vs Timberwolves", "Pick": "Murray u6.5 AST", "Confidence": 85, "Odds": "-150"}
 ]
 
 # ------------------------
