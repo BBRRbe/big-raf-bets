@@ -9,27 +9,27 @@ import pytz
 # ------------------------
 PASSWORD = "ieatfarts"
 if "authenticated" not in st.session_state:
-  st.session_state.authenticated = False
+    st.session_state.authenticated = False
 
 if not st.session_state.authenticated:
-  st.title("Big Raf Bets™")
-password_input = st.text_input("Enter Password to Access:", type="password")
-if password_input == PASSWORD:
-  st.session_state.authenticated = True
-  st.experimental_rerun()
-else:
-  st.stop()
+    st.title("Big Raf Bets™")
+    password_input = st.text_input("Enter Password to Access:", type="password")
+    if password_input == PASSWORD:
+        st.session_state.authenticated = True
+        st.experimental_rerun()
+    else:
+        st.stop()
 
 # ------------------------
 # STYLING
 # ------------------------
 st.markdown("""
-    <style>
-        body, .stApp { background-color: #fff0f5; color: #000000; }
-        .main { background-color: #ffffff; }
-        .css-1rs6os.edgvbvh3 { background-color: #ffe4ec; }
-        h1, h2, h3 { color: #ff2c8a; }
-    </style>
+    <style>
+        body, .stApp { background-color: #fff0f5; color: #000000; }
+        .main { background-color: #ffffff; }
+        .css-1rs6os.edgvbvh3 { background-color: #ffe4ec; }
+        h1, h2, h3 { color: #ff2c8a; }
+    </style>
 """, unsafe_allow_html=True)
 
 st.title("Big Raf Bets™")
@@ -50,30 +50,30 @@ selected_date = today if date_choice == "Today" else tomorrow
 # SAMPLE PICKS TABLE (DYNAMICALLY REPLACE WITH MODEL DATA)
 # ------------------------
 picks = [
-{"League": "NBA", "Game": "Nuggets vs Timberwolves", "Pick": "Jokic o9.5 AST", "Confidence": 94, "Odds": "-105"},
-{"League": "NHL", "Game": "Stars vs Avalanche", "Pick": "Over 5.5 goals", "Confidence": 91, "Odds": "+100"},
-{"League": "NHL", "Game": "Stars vs Avalanche", "Pick": "Stars ML", "Confidence": 88, "Odds": "+116"},
-{"League": "NBA", "Game": "Nuggets vs Timberwolves", "Pick": "Murray u6.5 AST", "Confidence": 85, "Odds": "-150"}
+    {"League": "NBA", "Game": "Nuggets vs Timberwolves", "Pick": "Jokic o9.5 AST", "Confidence": 94, "Odds": "-105"},
+    {"League": "NHL", "Game": "Stars vs Avalanche", "Pick": "Over 5.5 goals", "Confidence": 91, "Odds": "+100"},
+    {"League": "NHL", "Game": "Stars vs Avalanche", "Pick": "Stars ML", "Confidence": 88, "Odds": "+116"},
+    {"League": "NBA", "Game": "Nuggets vs Timberwolves", "Pick": "Murray u6.5 AST", "Confidence": 85, "Odds": "-150"}
 ]
 
 # ------------------------
 # CONFIDENCE SCORE TO EMOJI
 # ------------------------
 def emoji_score(score):
-if score >= 300:
-    return "🔥🚨 Elite Lock"
-elif score >= 200:
-    return "✅ Very Reliable"
-elif score >= 100:
-    return "👍 Stable Signal"
-elif score >= 70:
-    return "⚠️ Borderline"
-else:
-  return "❌ No Play"
+    if score >= 90:
+        return "🔥🚨 Elite Lock"
+    elif score >= 80:
+        return "✅ Very Reliable"
+    elif score >= 70:
+        return "👍 Stable Signal"
+    elif score >= 60:
+        return "⚠️ Borderline"
+    else:
+        return "❌ No Play"
 
 # Apply labels
 for pick in picks:
-pick["Confidence Label"] = emoji_score(pick["Confidence"])
+    pick["Confidence Label"] = emoji_score(pick["Confidence"])
 
 # ------------------------
 # DISPLAY PICKS
