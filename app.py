@@ -14,11 +14,11 @@ st.session_state.authenticated = False
 if not st.session_state.authenticated:
 st.title("Big Raf Bets™")
 password_input = st.text_input("Enter Password to Access:", type="password")
-    if password_input == PASSWORD:
-        st.session_state.authenticated = True
-        st.experimental_rerun()
-    else:
-        st.stop()
+if password_input == PASSWORD:
+st.session_state.authenticated = True
+st.experimental_rerun()
+else:
+st.stop()
 
 # ------------------------
 # STYLING
