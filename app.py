@@ -17,7 +17,7 @@ password_input = st.text_input("Enter Password to Access:", type="password")
 if password_input == PASSWORD:
   st.session_state.authenticated = True
   st.experimental_rerun()
-  else:
+else:
   st.stop()
 
 # ------------------------
