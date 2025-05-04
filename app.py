@@ -1,4 +1,3 @@
-
 # app.py
 import streamlit as st
 from datetime import datetime, timedelta
@@ -14,17 +13,10 @@ if "authenticated" not in st.session_state:
 
 if not st.session_state.authenticated:
     st.title("Big Raf Bets™")
-    with st.form("password_form"):
-        password_input = st.text_input("Enter Password to Access:", type="password")
-        submitted = st.form_submit_button("Submit")
-
-    if submitted:
-        if password_input == PASSWORD:
-            st.session_state.authenticated = True
-            st.experimental_rerun()
-        else:
-            st.error("Incorrect password.")
-            st.stop()
+    password_input = st.text_input("Enter Password to Access:", type="password")
+    if password_input == PASSWORD:
+        st.session_state.authenticated = True
+        st.rerun()
     else:
         st.stop()
 
