@@ -60,7 +60,7 @@ picks = [
 # CONFIDENCE SCORE TO EMOJI
 # ------------------------
 def emoji_score(score):
-if score >= 300:
+  if score >= 300:
 return "🔥🚨 Elite Lock"
 elif score >= 200:
 return "✅ Very Reliable"
